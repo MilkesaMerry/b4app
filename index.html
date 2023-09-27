@@ -293,7 +293,6 @@ footer small {
 </body>
 <script>
     function saveAll(){
-    (async () => {
   const myNewObject = new Parse.Object('Users');
   myNewObject.set('username', 'A string');
   myNewObject.set('password', 'A string');
@@ -304,12 +303,8 @@ footer small {
   } catch (error) {
     console.error('Error while creating Users: ', error);
   }
-})();
- // Add on click listener to call the create parse user function
-    document.getElementById("createButton").addEventListener("click", async function () {
-    saveAll();
-    });  
-    }
+    }  
+    
 </script>
 </html>
 
