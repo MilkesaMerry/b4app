@@ -292,10 +292,8 @@ footer small {
 
 </body>
 <script>
-    // Initialize Parse
-    Parse.initialize("lm59RlqT6R3nKbuQEkf9OtoBxz8sB2XnbMYsoYKb", "saiHkSrLOlUvI25pF6DV3nteoL9F1HPZVFlBxKqE"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    Parse.serverURL = "https://parseapi.back4app.com/";
-    async function createParseUser() {
+    function saveAll(){
+    (async () => {
   const myNewObject = new Parse.Object('Users');
   myNewObject.set('username', 'A string');
   myNewObject.set('password', 'A string');
@@ -309,8 +307,9 @@ footer small {
 })();
  // Add on click listener to call the create parse user function
     document.getElementById("createButton").addEventListener("click", async function () {
-      createParseUser();
+    saveAll();
     });  
+    }
 </script>
 </html>
 
